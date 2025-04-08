@@ -1,9 +1,9 @@
 [submodule "MaisFoco"]
 	path = MaisFoco
-	url = ./MaisFoco
+	url = https://github.com/Ddiidev/MaisFoco
 [submodule "JobSendRecomendation"]
 	path = JobSendRecomendation
-	url = ./JobSendRecomendation
+	url = https://github.com/Ddiidev/JobSendRecomendation
 [submodule "Core"]
 	path = Core
-	url = ./Core
+	url = https://github.com/Ddiidev/Core
