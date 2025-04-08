@@ -1,0 +1,9 @@
+[submodule "MaisFoco"]
+	path = MaisFoco
+	url = ./MaisFoco
+[submodule "JobSendRecomendation"]
+	path = JobSendRecomendation
+	url = ./JobSendRecomendation
+[submodule "Core"]
+	path = Core
+	url = ./Core
