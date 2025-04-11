@@ -101,30 +101,30 @@ services:
     networks:
       - maisfoco-network
 
-  # Job Send Recommendation Service (renamed to CamelCase)
-  Jobs:
-    build:
-      context: ./JobSendRecomendation
-      dockerfile: dockerfiles/Dockerfile.job_send_recomendation
-    container_name: maisfoco-Jobs
-    ports:
-      - "9009:9009"
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - ./JobSendRecomendation/.env.local:/app/.env.local
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-    env_file:
-      - ./JobSendRecomendation/.env.local
-    deploy:
-      resources:
-        limits:
-          cpus: '0.20'
-          memory: 256M
-    networks:
-      - maisfoco-network
+  # Job Send Recommendation Service
+    jobs:
+      build:
+        context: ./JobSendRecomendation
+        dockerfile: dockerfiles/Dockerfile.job_send_recomendation
+      container_name: maisfoco-jobs
+      ports:
+        - "9009:9009"
+      depends_on:
+        postgres:
+          condition: service_healthy
+      volumes:
+        - ./JobSendRecomendation/.env.local:/app/.env.local
+        - /etc/timezone:/etc/timezone:ro
+        - /etc/localtime:/etc/localtime:ro
+      env_file:
+        - ./JobSendRecomendation/.env.local
+      deploy:
+        resources:
+          limits:
+            cpus: '3.0'
+            memory: 256M
+        networks:
+          - maisfoco-network
 
 networks:
   maisfoco-network:
