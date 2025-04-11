@@ -102,7 +102,7 @@ services:
       - maisfoco-network
 
   # Job Send Recommendation Service
-    jobs:
+  jobs:
       build:
         context: ./JobSendRecomendation
         dockerfile: dockerfiles/Dockerfile.job_send_recomendation
@@ -123,7 +123,7 @@ services:
           limits:
             cpus: '3.0'
             memory: 256M
-        networks:
+      networks:
           - maisfoco-network
 
 networks:
