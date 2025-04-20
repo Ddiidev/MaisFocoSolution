@@ -1,9 +1,12 @@
 [submodule "MaisFoco"]
 	path = MaisFoco
+	branch = main
 	url = https://github.com/Ddiidev/MaisFoco
 [submodule "JobSendRecomendation"]
 	path = JobSendRecomendation
+	branch = main
 	url = https://github.com/Ddiidev/JobSendRecomendation
 [submodule "Core"]
 	path = Core
+	branch = main
 	url = https://github.com/Ddiidev/Core
